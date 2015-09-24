@@ -19,22 +19,20 @@ curl -X DELETE http://localhost:9000/adverts/1
 example:
 
 <POSTING JAGUAR>
-Roses-MacBook-Air:Applications roseair$ curl -X POST http://localhost:9000/adverts -H "Content-Type: application/json" -d "{\"title\": \"Jaguar XT\", \"fuel\": \"GAS\", \"price\": \"125000\", \"issnew\": \"YES\"}"
-landing in ADVERT REPOSITORY 
- created Advert: Advert(Some(1),Jaguar XT)
+Rcurl -X POST http://localhost:9000/adverts -H "Content-Type: application/json" -d "{\"title\": \"Jaguar XT\", \"fuel\": \"GAS\", \"price\": \"125000\", \"issnew\": \"YES\"}"
+ landing in ADVERT REPOSITORY 
+  created Advert: Advert(Some(1),Jaguar XT)
   POST done 
 <CHECK WHAT WAS POSTED>
-Roses-MacBook-Air:Applications roseair$ curl -X GET http://localhost:9000/adverts/1
+curl -X GET http://localhost:9000/adverts/1
 {"id":1,"title":"Jaguar XT"}Roses-MacBook-Air:Applications roseair$
 <CHANGE THE CARS>
-Roses-MacBook-Air:Applications roseair$ curl -H "Content-Type: application/json" -X PUT http://localhost:9000/adverts/1 -d "{\"title\": \"Fiat125\", \"fuel\": \"GAS\", \"price\": \"125000\", \"issnew\": \"YES\"}"
+curl -H "Content-Type: application/json" -X PUT http://localhost:9000/adverts/1 -d "{\"title\": \"Fiat125\", \"fuel\": \"GAS\", \"price\": \"125000\", \"issnew\": \"YES\"}"
 <CHANGED JAGUAR TO FIAT>
-Roses-MacBook-Air:Applications roseair$ curl -X GET http://localhost:9000/adverts/1
+curl -X GET http://localhost:9000/adverts/1
 {"id":1,"title":"Fiat125"}
 <DELETING id=1>
-Roses-MacBook-Air:Applications roseair$ curl -X DELETE http://localhost:9000/adverts/1
-Roses-MacBook-Air:Applications roseair$
+curl -X DELETE http://localhost:9000/adverts/1
 <CHECK IF EMPTY>
-Roses-MacBook-Air:Applications roseair$ curl -X GET http://localhost:9000/adverts/1
-Roses-MacBook-Air:Applications roseair$
+curl -X GET http://localhost:9000/adverts/1
 <YES>
