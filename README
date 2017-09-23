@@ -18,7 +18,7 @@ curl -X DELETE http://localhost:9000/adverts/1
 #example:
 
 #<POSTING JAGUAR>
-Rcurl -X POST http://localhost:9000/adverts -H "Content-Type: application/json" -d "{\"title\": \"Jaguar XT\", \"fuel\": \"GAS\", \"price\": \"125000\", \"issnew\": \"YES\"}"
+curl -X POST http://localhost:9000/adverts -H "Content-Type: application/json" -d "{\"title\": \"Jaguar XT\", \"fuel\": \"GAS\", \"price\": \"125000\", \"issnew\": \"YES\"}"
  landing in ADVERT REPOSITORY 
   created Advert: Advert(Some(1),Jaguar XT)
   POST done 
